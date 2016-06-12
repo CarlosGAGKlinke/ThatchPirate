@@ -52,7 +52,7 @@ class ThatchPirate
             return;
         }
 
-        require_once SOURCEPATH . $this->not_found;
+        require_once ROOTPATH . $this->not_found;
         return;
     }
     
