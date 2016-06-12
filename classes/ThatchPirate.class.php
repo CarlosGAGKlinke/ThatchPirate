@@ -26,6 +26,34 @@ class ThatchPirate
             $this->controller->index();
             return;
         }
+
+        if(!file_exists(ROOTPATH.'/controllers/'.$this->controller.'.php')){
+            require_once ROOTPATH.$this->not_found;
+            return;
+        }
+
+        require_once ROOTPATH.'/controllers/'.$this->controller.'.php';
+
+        $this->controller = preg_replace( '/[^a-zA-Z]/i', '', $this->controller );
+        
+        if(!class_exists($this->controller)){
+            require_once ROOTPATH.$this->not_found;
+            return;
+        }
+        
+        $this->controller = new $this->controller ($this->params);
+
+        if(method_exists($this->controller, $this->action)){
+            $this->controller->{$this->action}($this->params);
+            return;
+        }
+        if(!$this->action && method_exists($this->controller, 'index')){
+            $this->controller->index($this->params);
+            return;
+        }
+
+        require_once SOURCEPATH . $this->not_found;
+        return;
     }
     
     public function getUrlData()
