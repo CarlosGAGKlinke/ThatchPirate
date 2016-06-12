@@ -18,8 +18,14 @@ class ThatchPirate
     
     public function __construct()
     {
-        $tst = $this->getUrlData();
-        echo $tst;
+        $this->getUrlData();
+
+        if(!$this->controller){
+            require_once ROOTPATH . '/controllers/homeController.php';
+            $this->controller = new HomeController();
+            $this->controller->index();
+            return;
+        }
     }
     
     public function getUrlData()
@@ -30,7 +36,16 @@ class ThatchPirate
             $path = filter_var($path, FILTER_SANITIZE_URL);
             $path = explode('/', $path);
             
-            $this->controller = 
+            $this->controller = checkArray($path, 0);
+            
+            $this->action = checkArray($path, 1);
+            
+            if(checkArray($path, 2)){
+                unset($path[0]);
+                unset($path[1]);
+                
+                $this->params = array_values($path);
+            }
         }
     }
 }
