@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7abc70a0-54e5-4e67-8283-9727b0868585" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="7abc70a0-54e5-4e67-8283-9727b0868585" name="Default" comment="" />
     <ignored path="ThatchPirate.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -276,12 +274,12 @@
       <workItem from="1465616013086" duration="342000" />
       <workItem from="1465656311543" duration="3120000" />
       <workItem from="1465735261134" duration="6677000" />
-      <workItem from="1465769293532" duration="736000" />
+      <workItem from="1465769293532" duration="1298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10875000" />
+    <option name="totallyTimeSpent" value="11437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
