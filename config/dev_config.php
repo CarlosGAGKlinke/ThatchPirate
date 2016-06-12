@@ -21,4 +21,4 @@ define('DBPASS', '');
 //echo ROOTPATH;
 
 // Request load.php
-require_once '../load.php';
+require_once '/../load.php';
